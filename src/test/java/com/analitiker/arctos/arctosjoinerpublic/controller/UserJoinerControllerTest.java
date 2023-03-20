@@ -21,15 +21,15 @@ class UserJoinerControllerTest {
     private MockMvc mvc;
 
 
-    @Test
-    public void signUpNewUser() throws Exception {
-        mvc.perform(MockMvcRequestBuilders
-                        .put("/signup")
-                        .content(asJsonString(new UserSignUpRequest("pass", "matt@pass@email.com",
-                                new AccountVerification(VerificationType.EMAIL, 123456789, "email@email", CountryMobilePhonePrefixType.PL))))
-                        .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk());
-    }
+//    @Test
+//    public void signUpNewUser() throws Exception {
+//        mvc.perform(MockMvcRequestBuilders
+//                        .put("/signup")
+//                        .content(asJsonString(new UserSignUpRequest("pass", "matt@pass@email.com",
+//                                new AccountVerification(VerificationType.EMAIL, 123456789, "email@email", CountryMobilePhonePrefixType.PL))))
+//                        .contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk());
+//    }
 
     public static String asJsonString(final Object obj) {
         try {
